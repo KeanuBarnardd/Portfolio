@@ -1,0 +1,88 @@
+@import "../../variables";
+
+// Navbar Styling
+.nav-bg {
+  position: sticky;
+  top: 0;
+  background-color: $main-background-col;
+  z-index: 100;
+  .nav {
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      h4 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-bottom: 0 !important;
+        color: $light-text-col;
+        span {
+          color: rgb(75, 155, 155);
+        }
+        .dash {
+          color: grey;
+        }
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      .link {
+        font-family: $header-font;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: $light-text-col;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      .link:hover {
+        color: rgb(177, 241, 243);
+      }
+    }
+
+    .hamburger {
+      display: none;
+      align-self: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: $light-text-col;
+    }
+
+    .hamburger:hover {
+      color: rgb(177, 241, 243);
+    }
+  }
+}
+
+@media all and (max-width: $width-2) {
+  .nav-bg {
+    .nav {
+      .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 43px;
+        gap: 0;
+        flex-direction: column;
+        border-bottom: 4px solid rgb(161, 227, 236);
+        background-color: $main-background-col;
+        width: 100%;
+        text-align: center;
+        transition: 0.6s;
+        .link {
+          margin: 5px 0;
+        }
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  }
+}

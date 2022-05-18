@@ -1,0 +1,56 @@
+@import "../../../variables";
+
+.skills-list {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  min-width: 472px;
+
+  .item-container {
+    text-align: center;
+    .skill-icon {
+      font-size: 4em;
+      color: $light-accent-blue-col;
+      transition: 1s all ease-in-out;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      color: rgb(184, 179, 179);
+      font-weight: bold;
+      transition: 1s all ease-in-out;
+    }
+  }
+}
+
+@keyframes animateIcon {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+// Media Queries
+
+
+@media all and (max-width: $width-2) {
+  .skills-list {
+    display: grid;
+    grid-template-rows: 1 1;
+    gap: 10px;
+    .item-container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  }
+}

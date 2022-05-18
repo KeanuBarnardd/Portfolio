@@ -1,0 +1,98 @@
+@import "./variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(230, 226, 226);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font;
+}
+h2,
+h3 {
+  letter-spacing: 2px;
+}
+
+.container-w {
+  width: 80%;
+  max-width: 1300px;
+  //border: 2px solid red;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  color: $light-text-col;
+  font-size: 1.1em;
+  padding: 0.8em 1em;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 2px;
+  transition: all 0.7s ease-in-out;
+}
+
+.btn-dark {
+  color: $dark-grey-text-col;
+  border-color: $dark-grey-text-col;
+  transition: 1s all ease-in-out;
+}
+
+.btn:hover {
+  background-color: $accnet-blue-col;
+  border-color: $accnet-blue-col;
+  color: white;
+}
+
+// Headers & Text
+.section-header {
+  margin-top: 7rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $dark-text-col;
+}
+
+.text-light {
+  color: white;
+}
+
+// General Style Components
+.header-underline {
+  width: 150px;
+  height: 7px;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, rgb(118, 180, 221) 30%, rgb(77, 139, 197) 30%);
+}
+
+// Align Items
+.align-right {
+  text-align: end;
+}
+
+// Media Queries
+@media all and (max-width:$width-iphone-1){
+  .container-w{
+    width: 95%;
+  }
+}
+

@@ -1,0 +1,98 @@
+@import "../../variables";
+
+header {
+  background-color: $main-background-col;
+  height: 100vh;
+
+  .header-content {
+    padding-top: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1,
+    h2 {
+      text-align: center;
+      cursor: default;
+      font-family: "Staatliches", cursive;
+      letter-spacing: 3px;
+    }
+
+    h1 {
+      font-size: 11em;
+      color: $light-text-col;
+      line-height: 1;
+      transition: ease-in-out 0.5s all;
+    }
+    h2 {
+      color: $dark-grey-text-col;
+      transition: ease-in-out 0.5s all;
+    }
+
+    button {
+      margin-top: 5rem;
+      cursor: pointer;
+      font-family: "Staatliches", cursive;
+      letter-spacing: 2px;
+      transition: all 0.4s ease-in-out;
+    }
+    button:hover {
+      background-color: $accnet-blue-col;
+      border-color: $accnet-blue-col;
+      color: white;
+    }
+  }
+}
+
+// Header Text Animation Styling
+
+.link-effect-2 {
+  overflow: hidden;
+  display: flex;
+  gap: 15px;
+  .hover-head-text {
+    overflow: hidden;
+    height: 1em;
+    color: #797878;
+    font-weight: 400;
+    span {
+      position: relative;
+      display: inline-block;
+      transition: 0.3s;
+      &::before {
+        color: rgb(161, 210, 223);
+        position: absolute;
+        top: 100%;
+        content: attr(data-hover);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    &:hover {
+      span {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+// Media Queries
+@media all and (max-width:$width-1) {
+  header{
+    .header-content{
+      h1{
+        font-size: 8rem;
+      }
+    }
+  }
+}
+@media all and (max-width:$width-2) {
+  header{
+    .header-content{
+      h1{
+        font-size: 5rem;
+      }
+      h2{
+        font-size: 1rem;
+      }
+    }
+  }
+}

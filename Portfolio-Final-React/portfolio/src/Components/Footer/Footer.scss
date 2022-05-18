@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.footer {
+  background-color: $dark-text-col;
+  margin-bottom: 0%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  h2 {
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    font-size: 1.6rem;
+    color: white;
+    border-bottom: 2px solid $accnet-blue-col;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .socials-container {
+      display: flex;
+      gap: 15px;
+    }
+
+    .details-container {
+      display: flex;
+      gap: 10px;
+      p {
+        margin: 0;
+        span {
+          transition: all 0.3s ease-in-out;
+          color: $accnet-blue-col;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.social-link {
+  transition: all 0.3s ease-in-out;
+  font-size: 1.6rem;
+  color: white;
+  background: none;
+  border-style: none;
+}
+
+.social-link:hover {
+  color: $light-accent-blue-col;
+}
+
+// Media Queries
+
+@media all and (max-width: $footer-width-1) {
+  .footer {
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+@media all and  (max-width: $width-2) {
+  .footer {
+    .footer-content {
+      .details-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
