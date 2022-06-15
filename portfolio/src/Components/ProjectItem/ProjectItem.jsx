@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 
 //Import Components
 import ImageSlider from "../ImageSlider/ImageSlider";
@@ -9,6 +9,7 @@ export default function ProjectItem(props) {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
   return (
     <div data-aos={props.animationType} className="proj-container">
       <div className="proj-item">
@@ -16,20 +17,7 @@ export default function ProjectItem(props) {
           <h1 className="proj-title">{props.title}</h1>
           <p className="proj-text">{props.description}</p>
           <h3>Skills</h3>
-          <div className="proj-skills">
-            <p className="skill">
-              <span>React</span>
-            </p>
-            <p className="skill">
-              <span>Javascript</span>
-            </p>
-            <p className="skill">
-              <span>MySql</span>
-            </p>
-            <p className="skill">
-              <span>NodeJs</span>
-            </p>
-          </div>
+          <div className="proj-skills">{props.skillsList}</div>
           <div className="proj-btn-container">
             <a href={props.demoLinK} className="project-btn">
               <i className="fa-solid fa-eye"></i>Live Project
