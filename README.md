@@ -31,7 +31,7 @@ With no profesional experience working with CSS/SCSS I tried a method that I fel
 ![File Set up Img](./Read-Me-Imgs/fileSystem.PNG)
 
 <h3> Animations </h3>
-To handle all the scroll animations I used the AOS Animations package along with React-Scroll to create the smooth animations. When the user clicks on the link it will smooth scroll to the component location with React-scroll. As it scrolls the components will fade in based on the animation type. Defined by 'data-aos'
+To handle all the scroll animations I used the AOS Animations package along with React-Scroll to create the smooth animations. When the user clicks on the link it will smooth scroll to the component location with React-scroll. As it scrolls the components will fade in based on the animation type. Defined by 'data-aos'.
 
 ![Projects Img](./Read-Me-Imgs/Projects.PNG)
 
