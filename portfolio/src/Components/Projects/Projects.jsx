@@ -47,6 +47,3 @@ export default function Projects() {
   );
 }
 
-/*
-I created a Bug Tracker with React that allows users to log bugs within their program during development. This application allows the user to create, edit and resolve logged bugs. Organising logs into a digestable and maintable solution. This was my first 'real' project and one I can proudly say I did myself from top to bottom. That wasn't just a follow along Youtube tutorial.
-*/
